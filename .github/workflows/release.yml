@@ -1,0 +1,97 @@
+# Build and publish release assets for Linux, macOS (Intel + Apple Silicon), and Windows.
+# Trigger: push an annotated or lightweight tag matching v* (e.g. v0.1.0).
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  build:
+    name: ${{ matrix.name }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: linux-x86_64
+            os: ubuntu-latest
+            target: x86_64-unknown-linux-gnu
+            suffix: linux-x86_64
+            pack: tar
+
+          - name: windows-x86_64
+            os: windows-latest
+            target: x86_64-pc-windows-msvc
+            suffix: windows-x86_64
+            pack: zip
+
+          - name: macos-aarch64
+            os: macos-latest
+            target: aarch64-apple-darwin
+            suffix: macos-aarch64
+            pack: tar
+
+          - name: macos-x86_64
+            os: macos-latest
+            target: x86_64-apple-darwin
+            suffix: macos-x86_64
+            pack: tar
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: ${{ matrix.target }}
+
+      - uses: Swatinem/rust-cache@v2
+        with:
+          key: ${{ matrix.target }}
+
+      - name: Build
+        run: cargo build --release --target ${{ matrix.target }}
+
+      - name: Package (tar)
+        if: matrix.pack == 'tar'
+        run: |
+          chmod +x "target/${{ matrix.target }}/release/xiaomi-debloater"
+          tar -czvf "xiaomi-debloater-${{ github.ref_name }}-${{ matrix.suffix }}.tar.gz" \
+            -C "target/${{ matrix.target }}/release" xiaomi-debloater
+
+      - name: Package (zip)
+        if: matrix.pack == 'zip'
+        shell: pwsh
+        run: |
+          $out = "xiaomi-debloater-${{ github.ref_name }}-${{ matrix.suffix }}.zip"
+          Compress-Archive -Path "target/${{ matrix.target }}/release/xiaomi-debloater.exe" -DestinationPath $out -Force
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dist-${{ matrix.suffix }}
+          path: xiaomi-debloater-${{ github.ref_name }}-*
+
+  release:
+    name: Publish GitHub Release
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: dist-*
+          path: assets
+          merge-multiple: true
+
+      - uses: softprops/action-gh-release@v2
+        with:
+          files: assets/*
+          generate_release_notes: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

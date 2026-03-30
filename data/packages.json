@@ -1,0 +1,416 @@
+[
+  {
+    "id": "com.miui.msa.global",
+    "category": "Advertising",
+    "description": "MIUI MSA (MIUI System Ads) — advertising framework",
+    "risk": "safe"
+  },
+  {
+    "id": "com.miui.systemAdSolution",
+    "category": "Advertising",
+    "description": "System ad solution components",
+    "risk": "safe"
+  },
+  {
+    "id": "com.miui.analytics",
+    "category": "Analytics",
+    "description": "MIUI analytics / telemetry",
+    "risk": "safe"
+  },
+  {
+    "id": "com.xiaomi.joyose",
+    "category": "Analytics",
+    "description": "Joyose — background analytics / engagement",
+    "risk": "safe"
+  },
+  {
+    "id": "com.xiaomi.discover",
+    "category": "Xiaomi Apps",
+    "description": "Discover / content feeds",
+    "risk": "safe"
+  },
+  {
+    "id": "com.xiaomi.gamecenter",
+    "category": "Xiaomi Apps",
+    "description": "Xiaomi Game Center",
+    "risk": "safe"
+  },
+  {
+    "id": "com.mi.android.globalminusscreen",
+    "category": "MIUI",
+    "description": "Minus-one / App Vault screen (global)",
+    "risk": "safe"
+  },
+  {
+    "id": "com.mi.globalminusscreen",
+    "category": "MIUI",
+    "description": "Minus-one screen (alternate package name)",
+    "risk": "safe"
+  },
+  {
+    "id": "com.miui.personalassistant",
+    "category": "MIUI",
+    "description": "App vault / assistant overlay",
+    "risk": "caution"
+  },
+  {
+    "id": "com.miui.yellowpage",
+    "category": "MIUI",
+    "description": "Yellow pages / business listings",
+    "risk": "safe"
+  },
+  {
+    "id": "com.miui.hybrid",
+    "category": "MIUI",
+    "description": "Quick apps / hybrid framework",
+    "risk": "caution"
+  },
+  {
+    "id": "com.miui.bugreport",
+    "category": "MIUI",
+    "description": "MIUI bug report tool",
+    "risk": "safe"
+  },
+  {
+    "id": "com.miui.newmidrive",
+    "category": "MIUI",
+    "description": "Mi Drive cloud client",
+    "risk": "caution"
+  },
+  {
+    "id": "com.miui.cloudservice",
+    "category": "MIUI",
+    "description": "Mi Cloud services",
+    "risk": "caution"
+  },
+  {
+    "id": "com.miui.micloudsync",
+    "category": "MIUI",
+    "description": "Mi Cloud sync",
+    "risk": "caution"
+  },
+  {
+    "id": "com.xiaomi.payment",
+    "category": "Xiaomi Apps",
+    "description": "Mi Pay / payment framework",
+    "risk": "caution"
+  },
+  {
+    "id": "com.miui.videoplayer",
+    "category": "Media",
+    "description": "MIUI Video / Mi Video",
+    "risk": "safe"
+  },
+  {
+    "id": "com.miui.player",
+    "category": "Media",
+    "description": "MIUI Music player",
+    "risk": "safe"
+  },
+  {
+    "id": "com.miui.fm",
+    "category": "Media",
+    "description": "FM Radio app",
+    "risk": "safe"
+  },
+  {
+    "id": "com.miui.misound",
+    "category": "Media",
+    "description": "Mi Sound effects / audio tuner",
+    "risk": "caution"
+  },
+  {
+    "id": "com.miui.miservice",
+    "category": "MIUI",
+    "description": "MIUI services / recommendations",
+    "risk": "caution"
+  },
+  {
+    "id": "com.miui.cleanmaster",
+    "category": "MIUI",
+    "description": "Cleaner / storage management promotions",
+    "risk": "safe"
+  },
+  {
+    "id": "com.miui.calculator",
+    "category": "Tools",
+    "description": "MIUI Calculator (use another if removed)",
+    "risk": "safe"
+  },
+  {
+    "id": "com.miui.weather2",
+    "category": "Tools",
+    "description": "MIUI Weather",
+    "risk": "safe"
+  },
+  {
+    "id": "com.miui.notes",
+    "category": "Tools",
+    "description": "MIUI Notes",
+    "risk": "safe"
+  },
+  {
+    "id": "com.miui.screenrecorder",
+    "category": "Tools",
+    "description": "Screen recorder",
+    "risk": "safe"
+  },
+  {
+    "id": "com.miui.compass",
+    "category": "Tools",
+    "description": "Compass app",
+    "risk": "safe"
+  },
+  {
+    "id": "com.android.soundrecorder",
+    "category": "Tools",
+    "description": "Sound recorder",
+    "risk": "safe"
+  },
+  {
+    "id": "com.miui.voiceassist",
+    "category": "MIUI",
+    "description": "Voice assistant (regional; may differ by ROM)",
+    "risk": "caution"
+  },
+  {
+    "id": "com.xiaomi.scanner",
+    "category": "Tools",
+    "description": "Mi Scanner / document scanner",
+    "risk": "safe"
+  },
+  {
+    "id": "com.xiaomi.midrop",
+    "category": "Xiaomi Apps",
+    "description": "Mi Drop (nearby share)",
+    "risk": "caution"
+  },
+  {
+    "id": "com.miui.android.fashiongallery",
+    "category": "Wallpaper",
+    "description": "Carousel / Wallpaper magazine service",
+    "risk": "safe"
+  },
+  {
+    "id": "com.milink.service",
+    "category": "Connectivity",
+    "description": "Mi Link / casting service",
+    "risk": "caution"
+  },
+  {
+    "id": "com.xiaomi.micloud.sdk",
+    "category": "MIUI",
+    "description": "Mi Cloud SDK",
+    "risk": "caution"
+  },
+  {
+    "id": "com.xiaomi.xmsf",
+    "category": "Framework",
+    "description": "Xiaomi services framework (notifications / updates)",
+    "risk": "advanced"
+  },
+  {
+    "id": "com.xiaomi.xmsfkeeper",
+    "category": "Framework",
+    "description": "Keeps XMSF alive — only remove if you know the tradeoffs",
+    "risk": "advanced"
+  },
+  {
+    "id": "com.xiaomi.finddevice",
+    "category": "Security",
+    "description": "Find device — removing disables remote find/lock",
+    "risk": "advanced"
+  },
+  {
+    "id": "com.miui.miwallpaper",
+    "category": "Wallpaper",
+    "description": "MIUI live wallpaper service",
+    "risk": "caution"
+  },
+  {
+    "id": "com.miui.aod",
+    "category": "Display",
+    "description": "Always-on display customization",
+    "risk": "caution"
+  },
+  {
+    "id": "com.miui.greenguard",
+    "category": "MIUI",
+    "description": "Battery / usage guard (MIUI)",
+    "risk": "caution"
+  },
+  {
+    "id": "com.miui.contentextension",
+    "category": "MIUI",
+    "description": "Content extension / suggestions",
+    "risk": "safe"
+  },
+  {
+    "id": "com.miui.translation.kingsoft",
+    "category": "MIUI",
+    "description": "MIUI translation plugin",
+    "risk": "safe"
+  },
+  {
+    "id": "com.miui.translation.youdao",
+    "category": "MIUI",
+    "description": "Youdao translation plugin",
+    "risk": "safe"
+  },
+  {
+    "id": "com.miui.translation.service",
+    "category": "MIUI",
+    "description": "Translation service",
+    "risk": "caution"
+  },
+  {
+    "id": "com.miui.accessibility",
+    "category": "MIUI",
+    "description": "MIUI accessibility extras",
+    "risk": "advanced"
+  },
+  {
+    "id": "com.miui.face",
+    "category": "Biometrics",
+    "description": "Face unlock data / UI (do not remove if you rely on face unlock)",
+    "risk": "advanced"
+  },
+  {
+    "id": "com.miui.face.overlay.miui",
+    "category": "Biometrics",
+    "description": "Face unlock overlay",
+    "risk": "advanced"
+  },
+  {
+    "id": "com.xiaomi.glgm",
+    "category": "Xiaomi Apps",
+    "description": "Games / GL related service",
+    "risk": "safe"
+  },
+  {
+    "id": "com.xiaomi.mibrain.speech",
+    "category": "Xiaomi Apps",
+    "description": "Mi Brain speech services",
+    "risk": "caution"
+  },
+  {
+    "id": "com.miui.smarttravel",
+    "category": "MIUI",
+    "description": "Travel / commute assistant",
+    "risk": "safe"
+  },
+  {
+    "id": "com.miui.virtualsim",
+    "category": "MIUI",
+    "description": "Virtual SIM / data features",
+    "risk": "caution"
+  },
+  {
+    "id": "com.miui.nextpay",
+    "category": "MIUI",
+    "description": "Next pay / wallet hooks",
+    "risk": "caution"
+  },
+  {
+    "id": "com.miui.securityadd",
+    "category": "Security",
+    "description": "Security add-on",
+    "risk": "advanced"
+  },
+  {
+    "id": "com.google.android.apps.googleassistant",
+    "category": "Google",
+    "description": "Google Assistant (optional)",
+    "risk": "safe"
+  },
+  {
+    "id": "com.google.android.youtube",
+    "category": "Google",
+    "description": "YouTube (optional; reinstall from Play)",
+    "risk": "safe"
+  },
+  {
+    "id": "com.google.android.videos",
+    "category": "Google",
+    "description": "Google TV / Play Movies",
+    "risk": "safe"
+  },
+  {
+    "id": "com.google.android.music",
+    "category": "Google",
+    "description": "Play Music stub (if present)",
+    "risk": "safe"
+  },
+  {
+    "id": "com.google.android.googlequicksearchbox",
+    "category": "Google",
+    "description": "Google app / search box",
+    "risk": "caution"
+  },
+  {
+    "id": "com.facebook.appmanager",
+    "category": "Third-party",
+    "description": "Facebook app manager (preinstall)",
+    "risk": "safe"
+  },
+  {
+    "id": "com.facebook.services",
+    "category": "Third-party",
+    "description": "Facebook services",
+    "risk": "safe"
+  },
+  {
+    "id": "com.facebook.system",
+    "category": "Third-party",
+    "description": "Facebook system app",
+    "risk": "safe"
+  },
+  {
+    "id": "com.instagram.android",
+    "category": "Third-party",
+    "description": "Instagram (if preinstalled)",
+    "risk": "safe"
+  },
+  {
+    "id": "com.amazon.mShop.android.shopping",
+    "category": "Third-party",
+    "description": "Amazon Shopping (if preinstalled)",
+    "risk": "safe"
+  },
+  {
+    "id": "com.alibaba.aliexpresshd",
+    "category": "Third-party",
+    "description": "AliExpress (if preinstalled)",
+    "risk": "safe"
+  },
+  {
+    "id": "com.ebay.mobile",
+    "category": "Third-party",
+    "description": "eBay (if preinstalled)",
+    "risk": "safe"
+  },
+  {
+    "id": "com.microsoft.office.officehubrow",
+    "category": "Third-party",
+    "description": "Microsoft Office hub",
+    "risk": "safe"
+  },
+  {
+    "id": "com.linkedin.android",
+    "category": "Third-party",
+    "description": "LinkedIn (if preinstalled)",
+    "risk": "safe"
+  },
+  {
+    "id": "com.opera.preinstall",
+    "category": "Third-party",
+    "description": "Opera stub / preinstall",
+    "risk": "safe"
+  },
+  {
+    "id": "cn.wps.moffice_eng",
+    "category": "Third-party",
+    "description": "WPS Office (regional preinstall)",
+    "risk": "safe"
+  }
+]
