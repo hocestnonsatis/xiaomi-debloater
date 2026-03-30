@@ -14,9 +14,13 @@ That removes the app **for the current user (user 0)**. The package often remain
 
 - [Android Platform Tools](https://developer.android.com/tools/releases/platform-tools) (`adb` on your `PATH`)
 - USB debugging enabled on the phone, authorized for this computer
-- Rust toolchain **only if you build from source**
 
-## Install (from source)
+## Install
+
+1. Open [Releases](https://github.com/hocestnonsatis/xiaomi-debloater/releases) and download the archive for your OS (Linux, Windows, or macOS—use the Apple Silicon or Intel macOS build as appropriate).
+2. Extract it and run `xiaomi-debloater` (or `xiaomi-debloater.exe` on Windows). Put the binary on your `PATH` if you want to run it from any directory.
+
+**Build from source** (requires [Rust](https://rustup.rs/)):
 
 ```bash
 cargo install --path .
@@ -55,54 +59,6 @@ cargo build --release
 | q | Quit |
 
 Risk labels: **safe** (green), **caution** (yellow), **advanced** (red). Read descriptions before removing **advanced** entries.
-
-## Publish the repo (first time)
-
-From the project directory (folder name can be anything; GitHub repo should be `xiaomi-debloater`):
-
-```bash
-git branch -M main
-git add -A
-git commit -m "Initial commit: xiaomi-debloater"
-gh repo create xiaomi-debloater --public --source=. --remote=origin --push
-```
-
-If the empty repo already exists on GitHub:
-
-```bash
-git remote add origin https://github.com/YOUR_USER/xiaomi-debloater.git
-git branch -M main
-git push -u origin main
-```
-
-Update `repository` in `Cargo.toml` if your username is not `hocestnonsatis`.
-
-## Releases (GitHub Actions)
-
-Pushing a **version tag** builds **Linux x86_64**, **Windows x86_64**, **macOS aarch64**, and **macOS x86_64** in CI and attaches archives to a **GitHub Release** (`.tar.gz` for Unix, `.zip` for Windows).
-
-1. Bump `version` in `Cargo.toml` on `main` and merge/push as usual.
-2. Tag and push:
-
-   ```bash
-   git tag v0.1.0   # must match Cargo.toml version SemVer; prefix v is required for the workflow
-   git push origin v0.1.0
-   ```
-
-Workflow file: [`.github/workflows/release.yml`](.github/workflows/release.yml).
-
-## Extending the catalog
-
-Packages live in [`data/packages.json`](data/packages.json). Each entry has:
-
-- `id`: application id (`com….`)
-- `category`: grouping label
-- `description`: short English explanation
-- `risk`: `safe` \| `caution` \| `advanced`
-
-**Do not** add packages that are required for boot, encryption, telephony, or core MIUI security unless you clearly mark them `advanced` and document the impact.
-
-Pull requests that add well-described regional variants are welcome.
 
 ## License
 
